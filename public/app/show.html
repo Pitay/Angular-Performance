@@ -1,0 +1,21 @@
+<div ng-controller="showController as sho">
+
+    <div item-display>
+        <div id="show" >
+            directive-show
+        </div>
+        <div ng-hide="hide" style="">
+            directive-hide
+        </div>
+    </div>
+
+
+    <div ng-click="sho.showClick = !sho.showClick">
+        <div ng-show="sho.showClick">
+            click-show
+        </div>
+        <div ng-hide="sho.showClick">
+            click-hide
+        </div>
+    </div>
+</div>

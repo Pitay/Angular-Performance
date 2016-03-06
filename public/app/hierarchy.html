@@ -1,0 +1,17 @@
+<div ng-controller="Father as f">
+    {{location}}
+    <button ng-click="test()">
+        father-click
+    </button>
+    {{parameter}}
+
+    <div ng-controller="Son as s">
+        {{location}}
+        <button ng-click="test()">
+            son-click
+        </button>
+        {{son_parameter}}
+    </div>
+
+
+</div>
