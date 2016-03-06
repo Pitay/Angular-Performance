@@ -4,10 +4,32 @@
         Filter: <input type="text" size="20" ng-model="lis.filterValue " />
         {{lis.filterValue}}
     </form>
+    <!--Ng-show
+        <ul    style=" max-width: 50%;
+            float: left;">
+            <li ng-repeat="person in persons track by $index" ng-show="person.person.name.indexOf(lis.filterValue) !== -1 ||
+                                                      person.person.email.indexOf(lis.filterValue) !== -1 ||
+                                                      person.person.lastName.indexOf(lis.filterValue) !== -1">
 
-    <ul    style=" max-width: 50%;
-	    float: right;">
-        <li ng-repeat="person in persons |limit:10" ng-show="person.person.name.indexOf(lis.filterValue) > -1">
+                <div >{{person.person.name}} {{person.person.lastName}} {{person.person.email}}</div>
+
+            </li>
+        </ul>-->
+
+    <!--filter track by
+        <ul    style=" max-width: 50%;
+            float: right;">
+            <li ng-repeat="person in persons|filter:lis.filterValue track by $index">
+
+                <div >{{person.person.name}} {{person.person.lastName}} {{person.person.email}}</div>
+
+
+            </li>
+        </ul>-->
+
+    <!-- One way binding -->
+    <ul>
+        <li ng-repeat="person in persons|filter:lis.filterValue">
 
             <div >{{::person.person.name}} {{person.person.lastName}} {{person.person.email}}</div>
 
@@ -15,5 +37,5 @@
         </li>
     </ul>
 
-    </div>
+</div>
 </div>
